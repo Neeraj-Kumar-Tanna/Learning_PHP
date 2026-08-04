@@ -7,20 +7,24 @@
 </head>
 <body>
     <form action="index.php" method="post">
-        <label>Name : </label>
-        <input type="text" name="name">
+        <label >X : </label>
+        <input type="text" name="x">
         <br>
-        <label >age : </label>
-        <input type="number" name="age">
+        <input type="submit" value="calculate">
         <br>
-        <input type="submit" >
     </form>
 </body>
 </html>
 
 <?php
     //GET and POST
-    $name = $_POST["name"];
-    $age = $_POST["age"];
-    echo " name : {$name} , age : {$age}";
+    $x = $_POST["x"];
+    $circumference = round(2*pi()*$x , 2);
+    $area = round(pi()*pow($x , 2) , 2);
+    $volume = round(4/3*pi()*pow($x, 3) , 2);
+
+    echo "circumference : {$circumference} <br>";
+    echo "area : {$area} <br>";
+    echo "volume : {$volume} <br>";
+    
 ?>
