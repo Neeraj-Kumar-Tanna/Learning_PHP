@@ -1,19 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>learning php</title>
+</head>
+<body>
+    <form action="index.php" method="post">
+        <label>Name : </label>
+        <input type="text" name="name">
+        <br>
+        <label >age : </label>
+        <input type="number" name="age">
+        <br>
+        <input type="submit" >
+    </form>
+</body>
+</html>
+
 <?php
-    //Variables . 
-    $name = "neeraj kumar tanna <br>";
-    echo $name;
-    $age = 20;
-    echo "age is : {$age} <br>";
-    $cgpa = 8.06;
-    echo "cgpa is : {$cgpa} <br>";
-    $male = true;
-    if($male){
-        echo "male";
-    }
-    else{
-        echo "female";
-    }
-    echo "<br> is male : {$male}";
-
-
+    //GET and POST
+    $name = $_POST["name"];
+    $age = $_POST["age"];
+    echo " name : {$name} , age : {$age}";
 ?>
